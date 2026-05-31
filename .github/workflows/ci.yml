@@ -11,7 +11,7 @@ on:
 jobs:
   android:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         android-api-level:
           - '23'
@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: "Test Swift Package on Android"
-        uses: skiptools/swift-android-action@v2
+        uses: skiptools/swift-android-action@main
         with:
           swift-version: nightly-main
           android-api-level: ${{ matrix.android-api-level }}
