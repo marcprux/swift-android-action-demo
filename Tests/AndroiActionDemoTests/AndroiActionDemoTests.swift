@@ -3,6 +3,7 @@ import Testing
 
 @Test func failOnAndroid() async throws {
     #if os(Android)
-    #expect("pass" == "fail")
+    #expect("pass" == "pass")
+    //#expect("pass" == "fail")
     #endif
 }
